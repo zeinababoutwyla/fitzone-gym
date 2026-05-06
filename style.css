@@ -2228,10 +2228,22 @@ body.dark-mode .pricing-card--featured .pricing-card__cta:hover {
     flex-shrink: 0;
     color: var(--color-primary);
     transition: color var(--transition-fast);
+    animation: dumbbellLift 1.4s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .nav__logo:hover .nav__logo-icon {
     color: var(--color-secondary);
+}
+
+@keyframes dumbbellLift {
+    0%   { transform: translateY(0px)   rotate(0deg); }
+    20%  { transform: translateY(-5px)  rotate(-8deg); }
+    40%  { transform: translateY(-8px)  rotate(0deg); }
+    60%  { transform: translateY(-5px)  rotate(8deg); }
+    80%  { transform: translateY(0px)   rotate(0deg); }
+    90%  { transform: translateY(2px)   rotate(0deg); }
+    100% { transform: translateY(0px)   rotate(0deg); }
 }
 
 /* ── Nav CTA button ── */
